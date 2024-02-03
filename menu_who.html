@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHO Dashboard Menu</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        button {
+            border-radius: 8px;
+            background-color: lightblue;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #add8e6 !important;
+        }
+    </style>
+</head>
+<body style="margin: 0;">
+ <header>WHO Dashboard</header>
+    <p>Welcome to the WHO Dashboard. Please select an option below:</p>
+
+    <button onclick="window.location.href='home_who.html'">Home</button>
+    <button onclick="window.location.href='aboutus_who.html'">About Us</button>
+    <button onclick="window.location.href='contactus_who.html'">Contact Us</button>
+    <button onclick="window.location.href='gallery_who.html'">Gallery</button>
+
+<!-- Footer -->
+    <div style="background-color: #001f3f; color: white; padding: 5px; text-align: center; position: fixed; bottom: 0; width: 100%;">
+        <p style="margin: 0; font-size: 12px;">2024 WHO</p>
+        <p style="margin: 0; font-size: 12px;">Connect with us on:
+            <a href="https://www.instagram.com/who/?hl=en" style="color: white; text-decoration: none;">
+                <button style="background-color: #3f729b; color: white; padding: 3px 8px; border: none; cursor: pointer; font-size: 12px;">Instagram</button>
+            </a>
+            <a href="https://www.facebook.com/WHO/" style="color: white; text-decoration: none;">
+                <button style="background-color: #3f729b; color: white; padding: 3px 8px; border: none; cursor: pointer; font-size: 12px;">Facebook</button>
+            </a>
+        </p>
+    </div>
+</body>
+</html>

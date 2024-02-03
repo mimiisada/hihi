@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .carousel-container {
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .carousel img {
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+    <script>
+        // JavaScript to handle automatic image carousel
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('.carousel');
+            const images = document.querySelectorAll('.carousel img');
+            let currentIndex = 0;
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateCarousel();
+            }
+
+            function updateCarousel() {
+                const translateValue = -currentIndex * 100 + '%';
+                carousel.style.transform = 'translateX(' + translateValue + ')';
+            }
+
+            setInterval(nextSlide, 3000); // Change image every 3 seconds
+        });
+    </script>
+    <title>Gallery</title>
+</head>
+<body style="margin: 0;">
+    <h1>WHO Image Gallery</h1>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="whoworks1.jpg" alt="Image 1">
+            <img src="whoworks2.jpg" alt="Image 2">
+            <img src="whoworks3.jpg" alt="Image 3">
+        </div>
+    </div>
+
+<!-- Footer -->
+    <div style="background-color: #001f3f; color: white; padding: 5px; text-align: center; position: fixed; bottom: 0; width: 100%;">
+        <p style="margin: 0; font-size: 12px;">2024 WHO</p>
+        <p style="margin: 0; font-size: 12px;">Connect with us on:
+            <a href="https://www.instagram.com/who/?hl=en" style="color: white; text-decoration: none;">
+                <button style="background-color: #3f729b; color: white; padding: 3px 8px; border: none; cursor: pointer; font-size: 12px;">Instagram</button>
+            </a>
+            <a href="https://www.facebook.com/WHO/" style="color: white; text-decoration: none;">
+                <button style="background-color: #3f729b; color: white; padding: 3px 8px; border: none; cursor: pointer; font-size: 12px;">Facebook</button>
+            </a>
+        </p>
+    </div>
+</body>
+</html>
